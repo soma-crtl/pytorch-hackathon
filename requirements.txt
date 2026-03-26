@@ -1,0 +1,5 @@
+gradio
+pydantic
+openenv-core
+huggingface_hub
+openai
