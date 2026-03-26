@@ -1,0 +1,25 @@
+id: ecommerce-recommendation-env
+name: E-commerce Recommendation Environment
+description: RL environment simulating user sessions and product recommendations
+version: 1.0.0
+
+entry_point: env:EcommerceEnv
+
+observation_space:
+  user_id: int
+  history: List[int]
+
+action_space:
+  recommended_product: int
+
+reward:
+  type: float
+  range: [-1, 1]
+
+tasks:
+  - name: easy
+    description: Maximize clicks
+  - name: medium
+    description: Predict purchases
+  - name: hard
+    description: Maximize session reward
